@@ -1,0 +1,158 @@
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 10px;
+  box-sizing: border-box;
+  background-color: #e9e7e7;
+}
+
+.container-wrapper {
+  width: 100%;
+  max-width: 1400px; /* geniş ekranlarda taşmaması için */
+}
+
+.search-container-home {
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container-home .search-input-home {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 700px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  width: 100%;
+  align-items: start;
+}
+
+.div1 {
+  grid-column: span 1 / span 1;
+  position: sticky; /* kategori menüsü sabit kalır */
+  top: 80px; /* header varsa onun altında sabitlenir */
+  align-self: start;
+}
+
+.category-table-home {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background: #fff; /* sticky olunca arka plan net olsun */
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-table-home th,
+.category-table-home td {
+  padding: 8px 10px;
+}
+
+.category-table-home th {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  background-color: #f2f2f2;
+}
+
+.category-table-home td {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.category-table-home tr:hover {
+  background-color: #f5f5f5;
+}
+
+.category-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.category-cell span {
+  color: #333;
+}
+
+.category-cell.active {
+  font-weight: bold;
+  color: #0077ff; /* aktif kategori belirgin */
+}
+
+.div2 {
+  grid-column: span 4 / span 4;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  padding-bottom: 60px; /* infinite scroll loading alanı */
+}
+
+/* Responsive küçük ekranlar için */
+@media (max-width: 500px) {
+  .parent {
+    grid-template-columns: 1fr; /* kategori üstte, ürünler altta */
+  }
+
+  .div1 {
+    grid-column: span 1 / span 1;
+    position: relative; /* sticky kaldır */
+    top: auto;
+    margin-bottom: 16px;
+  }
+
+  .div2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-table-home,
+  .category-table-home th,
+  .category-table-home td {
+    font-size: 12px;
+  }
+
+  .category-table-home {
+    width: 100%;
+  }
+}
+
+/* Küçük ekranlar (tablet) → 2'li */
+@media (min-width: 600px) {
+  .div2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Orta ekranlar (md) → 3'lü */
+@media (min-width: 1024px) {
+  .div2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Büyük ekranlar (xl) → 4'lü */
+@media (min-width: 1280px) {
+  .div2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

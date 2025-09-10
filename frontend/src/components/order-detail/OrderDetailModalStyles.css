@@ -1,0 +1,199 @@
+/* Modal arkaplan overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+/* Modal kutusu */
+.order-detail-modal {
+  background-color: #333;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Kapatma ikonu */
+.close-icon {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.close-icon:hover {
+  transform: scale(1.1);
+}
+
+/* İçerik konteyneri */
+.order-detail-modal-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Kullanıcı bilgisi */
+.order-holder {
+  background-color: #444;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.holder-name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.holder-email {
+  color: #bbb;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* Ürünler tablosu */
+.order-items {
+  background-color: #444;
+  padding: 14px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.order-items table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 14px;
+}
+
+.order-items th,
+.order-items td {
+  padding: 10px;
+  border-bottom: 1px solid #555;
+  text-align: center;
+}
+
+.order-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Adres bilgisi */
+.address-info {
+  background-color: #444;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fullAddress {
+  color: #eee;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.print-icon {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.print-icon:hover {
+  transform: scale(1.1);
+}
+
+/* ... önceki css aynı kalacak ... */
+
+/* Admin için durum güncelleme alanı */
+.order-status-container {
+  background-color: #444;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-status-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #555;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.order-status-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.order-status-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .order-detail-modal-container {
+    padding: 14px;
+  }
+
+  .order-items table th,
+  .order-items table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .order-item-image {
+    width: 36px;
+    height: 36px;
+  }
+
+  .holder-name {
+    font-size: 14px;
+  }
+
+  .fullAddress {
+    font-size: 12px;
+  }
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

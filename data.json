@@ -1,0 +1,75 @@
+const exampleProducts = [
+  {
+    title: "Salça",
+    description: "Tamamen doğal domateslerden üretilmiş, katkısız ve taze salça. Yemeklerinize yoğun bir aroma katarken sağlıklı beslenmenizi destekler. Ev yapımı lezzetiyle sofralarınızı şenlendirir.",
+    category: "Soslar",
+    images: [
+      { preview: "https://example.com/images/salca1.jpg", file: null },
+      { preview: "https://example.com/images/salca2.jpg", file: null },
+    ],
+    variants: [
+      { unit: "kg", size: 1, price: 20, stock: 50 },
+      { unit: "kg", size: 2, price: 38, stock: 30 },
+    ],
+  },
+  {
+    title: "Pul Biber",
+    description: "Özenle kurutulmuş ve taze çekilmiş pul biber. Yemeklerinize hafif acılık ve renk katar. Salatalardan çorbalara kadar tüm tariflerde kullanılabilir, doğal ve katkısızdır.",
+    category: "Baharatlar",
+    images: [
+      { preview: "https://example.com/images/pulbiber1.jpg", file: null },
+    ],
+    variants: [
+      { unit: "kg", size: 0.5, price: 30, stock: 100 },
+      { unit: "kg", size: 1, price: 55, stock: 60 },
+    ],
+  },
+  {
+    title: "Kuru Domates",
+    description: "Güneşte kurutulmuş, doğal ve katkısız kuru domates. Salatalarda, makarnalarda ve çeşitli yemeklerde zengin tat sunar. Yoğun aromasıyla mutfağınızın vazgeçilmezi olur.",
+    category: "Sebzeler",
+    images: [
+      { preview: "https://example.com/images/kuru_domates1.jpg", file: null },
+    ],
+    variants: [
+      { unit: "kg", size: 0.5, price: 50, stock: 40 },
+      { unit: "kg", size: 1, price: 95, stock: 25 },
+    ],
+  },
+  {
+    title: "Yeşil Zeytin",
+    description: "Ege’nin doğal bahçelerinden toplanmış, salamura yöntemiyle hazırlanmış taze yeşil zeytin. Kahvaltı sofralarınızı renklendirir ve yemeklerinizin lezzetini artırır.",
+    category: "Zeytinler",
+    images: [
+      { preview: "https://example.com/images/yesil_zeytin1.jpg", file: null },
+    ],
+    variants: [
+      { unit: "kg", size: 1, price: 60, stock: 50 },
+      { unit: "kg", size: 2, price: 115, stock: 30 },
+    ],
+  },
+  {
+    title: "Siyah Zeytin",
+    description: "Olgunlaşmış siyah zeytinlerin doğal salamura yöntemiyle hazırlanmasıyla elde edilmiştir. Lezzetli ve doğal aromasıyla kahvaltılarınız ve yemekleriniz için idealdir.",
+    category: "Zeytinler",
+    images: [
+      { preview: "https://example.com/images/siyah_zeytin1.jpg", file: null },
+    ],
+    variants: [
+      { unit: "kg", size: 1, price: 65, stock: 45 },
+      { unit: "kg", size: 2, price: 125, stock: 25 },
+    ],
+  },
+  {
+    title: "Zeytinyağı",
+    description: "Soğuk sıkım, doğal ve katkısız sızma zeytinyağı. Salatalarda, yemeklerde veya doğrudan tüketim için ideal. Ege’nin en kaliteli zeytinlerinden üretilmiştir ve sağlıklı beslenmenize katkı sağlar.",
+    category: "Yağlar",
+    images: [
+      { preview: "https://example.com/images/zeytinyagi1.jpg", file: null },
+    ],
+    variants: [
+      { unit: "L", size: 0.5, price: 90, stock: 40 },
+      { unit: "L", size: 1, price: 170, stock: 20 },
+    ],
+  },
+];

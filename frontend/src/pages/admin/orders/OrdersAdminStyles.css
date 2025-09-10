@@ -1,0 +1,214 @@
+.orders-admin-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  background-color: #1f1f1f;
+  box-sizing: border-box;
+}
+
+.orders-admin-title {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.orders-admin-summary-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap; /* küçük ekranlarda alt alta */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.orders-amount-box,
+.pending-orders,
+.snipped-orders,
+.cancenled-orders {
+  flex: 1 1 200px; /* esnek büyüklük */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #1e1e1e;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+}
+
+.orders-amount-title,
+.pending-orders-title,
+.snipped-orders-title,
+.cancenled-orders-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.orders-amount,
+.pending-orders-amount,
+.snipped-orders-amount,
+.cancenled-orders-amount {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.orders-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* filtre + tablo */
+  gap: 16px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .orders-grid-container {
+    grid-template-columns: 1fr; /* küçük ekranda üst üste */
+  }
+}
+
+/* Filtre tablosu */
+.filter-container-orders {
+  width: 100%;
+}
+
+.filter-container-orders table {
+  width: 100%;
+  background-color: #555;
+  color: #fff;
+  height: fit-content;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+.filter-container-orders th,
+.filter-container-orders td {
+  padding: 8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.filter-container-orders th:hover,
+.filter-container-orders td:hover {
+  background-color: #666;
+}
+
+.filter-container-orders th {
+  background-color: #333;
+}
+
+.filter-container-orders td {
+  background-color: #444;
+}
+
+.filter-container-orders tr:nth-child(even) {
+  background-color: #666;
+}
+
+.filter-container-orders tr:nth-child(odd) {
+  background-color: #777;
+}
+
+#order-date {
+  display: none;
+}
+
+/* Sipariş tablosu */
+.orders-table-container {
+  width: 100%;
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow-x: auto; /* küçük ekranlarda scroll */
+}
+
+.orders-table-container table {
+  width: 100%;
+  background-color: #555;
+  color: #fff;
+  table-layout: auto;
+}
+
+.orders-table-container th,
+.orders-table-container td {
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.orders-table-container th:hover,
+.orders-table-container td:hover {
+  background-color: #666;
+}
+
+.orders-table-container th {
+  background-color: #333;
+}
+
+.orders-table-container td {
+  background-color: #444;
+}
+
+.orders-table-container tr:nth-child(even) {
+  background-color: #666;
+}
+
+.orders-table-container tr:nth-child(odd) {
+  background-color: #777;
+}
+
+.order-detail-button {
+  color: #fff;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.order-detail-button:hover {
+  text-decoration: none;
+}
+
+/* Responsive font ve padding */
+@media (max-width: 600px) {
+  .orders-admin-title {
+    font-size: 20px;
+  }
+  .orders-amount,
+  .pending-orders-amount,
+  .snipped-orders-amount,
+  .cancenled-orders-amount {
+    font-size: 18px;
+  }
+  .orders-admin-summary-container {
+    padding: 12px;
+  }
+  .filter-container-orders table,
+  .orders-table-container table {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  #order-date {
+    display: table-cell;
+  }
+}

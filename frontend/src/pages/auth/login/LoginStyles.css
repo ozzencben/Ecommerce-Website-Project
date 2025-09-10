@@ -1,0 +1,60 @@
+.login-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 100%;
+  min-width: 300px;
+  max-width: 350px; /* mobil default */
+  display: flex;
+  flex-direction: column;
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-footer {
+  text-align: center;
+}
+
+/* Tablet (≥768px) */
+@media (min-width: 768px) {
+  .login-form {
+    max-width: 400px;
+  }
+}
+
+/* Küçük laptop (≥1024px) */
+@media (min-width: 1024px) {
+  .login-form {
+    max-width: 450px;
+  }
+}
+
+/* Orta laptop / masaüstü (≥1200px) */
+@media (min-width: 1200px) {
+  .login-form {
+    max-width: 500px;
+  }
+}
+
+/* Büyük masaüstü (≥1440px) */
+@media (min-width: 1440px) {
+  .login-form {
+    max-width: 550px;
+  }
+}
+
+/* Extra büyük ekranlar (≥1600px) */
+@media (min-width: 1600px) {
+  .login-form {
+    max-width: 600px;
+  }
+}

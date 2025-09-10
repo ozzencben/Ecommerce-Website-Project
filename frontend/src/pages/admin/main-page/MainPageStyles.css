@@ -1,0 +1,156 @@
+.main-page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 10px;
+  align-items: flex-start;
+  background-color: #1f1f1f;
+}
+
+.main-parent {
+  display: grid;
+  grid-template-columns: 1fr 4fr; /* Soldaki 1 birim, sağdaki 4 birim */
+  gap: 8px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Soldaki tablo */
+.table1 {
+  width: 100%;
+  background-color: #555;
+  color: #fff;
+  height: fit-content;
+}
+
+.table1 th,
+.table1 td {
+  padding: 8px;
+  text-align: center;
+}
+
+.table1 th {
+  background-color: #333;
+}
+
+.table1 td {
+  background-color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.table1 td:hover {
+  background-color: #555;
+}
+
+/* Sağdaki tablo */
+.table2 {
+  width: 100%;
+  height: fit-content;
+}
+
+/* Kategori tablosu */
+.category-table,
+.order-table {
+  width: 100%;
+  background-color: #555;
+  color: #fff;
+  padding: 8px;
+  height: fit-content;
+}
+
+.category-table th,
+.category-table td,
+.order-table th,
+.order-table td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+
+.category-table th,
+.order-table th {
+  background-color: #333;
+}
+
+.category-table td,
+.order-table td {
+  background-color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.add-category-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.add-category-row .category-input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #2a2a2a;
+  color: #fff;
+  margin-right: 8px;
+}
+
+.add-category-row .category-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.delete-btn-category {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #1f1f1f;
+  color: #fff;
+  display: none; /* default gizli */
+}
+
+.category-row {
+  height: 50px;
+}
+
+.category-row:hover .delete-btn-category {
+  display: block;
+}
+
+.add-category-row .category-button:hover {
+  background-color: #333;
+}
+
+/* Responsive ayarlar */
+
+/* Küçük ekranlar: tek sütun halinde göster */
+@media (max-width: 767px) {
+  .main-parent {
+    grid-template-columns: 1fr; /* tek sütun */
+  }
+
+  .table1,
+  .table2 {
+    width: 100%;
+  }
+}

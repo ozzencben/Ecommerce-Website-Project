@@ -1,0 +1,61 @@
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-container:hover {
+  border-color: #000; /* hover rengi */
+}
+
+.input-container.input-error {
+  border-color: #e74c3c; /* hata rengi */
+}
+
+.input-icon {
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  resize: none;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+textarea.input {
+  resize: vertical;
+  min-height: 80px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.password-toggle {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.password-toggle:hover {
+  transform: scale(1.1);
+}
+
+.password-toggle.active {
+  transform: rotate(180deg);
+}

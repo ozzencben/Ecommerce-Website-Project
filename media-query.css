@@ -1,0 +1,23 @@
+/* Mobil cihazlar (321px - 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+}
+
+/* Büyük mobil / küçük tablet (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+/* Tablet / küçük laptop (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Laptop / orta masaüstü (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* Büyük masaüstü (1201px - 1440px) */
+@media (min-width: 1201px) and (max-width: 1440px) {
+}
+
+/* Extra büyük ekranlar (1441px ve üstü) */
+@media (min-width: 1441px) {
+}
